@@ -6,6 +6,8 @@
   # How to try this ?
       just clone the project 
       
+      # cd campzin
+      
       # cd redfab
       
       # python3 manage.py migrate
