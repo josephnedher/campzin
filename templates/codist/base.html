@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+    <nav id="navbar-example2" class="navbar fixed-top navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'index' %}"><strong>CAMPZIN</strong></a>
+    <ul class="nav nav-pills">
+    <li class="nav-item">
+        <a href="#" class="nav-link active">Home</a>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link"><strong>COLLEGES</strong></a>
+    </li>
+    <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><strong>SERVICES</strong></a>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">LOGIN</a>
+            <a href="#" class="dropdown-item">CONTACT</a>
+            <a href="#" class="dropdown-item">HELP</a>
+    </li>
+    <li class="nav-item dropdown ml-auto">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">CONTRIBS</a>
+        <div class="dropdown-menu dropdown-menu-right">
+            <a href="{% url 'redapp:imager' %}" class="dropdown-item">upload</a>
+            <a href="#" class="dropdown-item">View</a>
+
+        </div>
+    </li>
+    <li class="nav-item">
+        <a href="{% url 'redapp:register' %}" class="nav-link"><strong>REGISTER</strong></a>
+    </li>
+    {% if user.is_authenticated %}
+    <li class="nav-item">
+      <a href="{% url 'logout' %}" class="nav-link"><strong>Log out</strong></a>  </li>
+    {% else %}
+    <li class="nav-item">
+      <a href="{% url 'redapp:user_login' %}" class="nav-link"><strong>Log in</strong></a>  </li>
+    {% endif %}
+
+</ul>
+
+</div>
+  </nav>
+
+</div>
+
+      {% block body_block %}
+      {% endblock %}
+
+
+  </body>
+</html>

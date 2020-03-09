@@ -1,0 +1,36 @@
+{% extends 'codist/base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block body_block %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style >
+form{
+  text-align: center;
+  padding: inherit;
+}
+
+</style>
+
+<div class="jumbotron">
+  {% if registered %}
+  <h1> thank you for registering </h1>
+  {% else %}
+    <div style="text-align:center">
+  <h1>Register</h1>
+  <form enctype="multipart/form-data" method="post"  class="px-4 py-3">
+    {% csrf_token %}
+
+
+   <div class="form-group">
+  <strong> {{ user_form|crispy }}
+    {{ profile_form|crispy}}
+    </div>
+     <button type="submit" class="btn btn-primary">Sign up</button>
+
+  </form>
+  </div>
+  {% endif %}
+
+</div>
+</div>
+{% endblock %}

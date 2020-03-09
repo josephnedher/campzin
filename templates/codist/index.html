@@ -1,0 +1,40 @@
+{% extends "codist/base.html" %}
+{% block body_block %}
+{% load staticfiles %}
+
+ <div class="jumbotron">
+     <center><h1><em>Learn With Change </em></h1></center>
+    <center>  <input type="text" placeholder="Search"></center>
+   </div>
+ <div class="container download" id="downloads">
+    <div class="row">
+
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        <img src="{%static "images/images1.jpeg" %}" alt="k" class="img-fluid">
+        <a class="btn btn-primary" href="{% url 'redapp:register' %}" role="button">Block Chain and Bitcoin</a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        <img src="{%static "images/images2.png" %}" alt="k" class="img-fluid">
+        <a class="btn btn-primary" href="{% url 'redapp:register' %}" role="button">Ethical Hacking with kali </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        <img src="{%static "images/index4.png" %}" alt="k" class="img-fluid">
+        <a class="btn btn-primary" href="{% url 'redapp:register' %}" role="button">Python3 advanced coding</a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+        <img src="{%static "images/images5.png" %}" alt="k" class="img-fluid">
+        <a class="btn btn-primary" href="{% url 'redapp:register' %}" role="button">DS AND ALGORITHMS FAST</a>
+        </div>
+
+    </div>
+ </div>
+
+
+
+</div>
+
+
+{% endblock %}
