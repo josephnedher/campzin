@@ -1,4 +1,4 @@
-# A simple Django Proect using functions 
+# A simple Django Project using functions 
 
 
   ![web](Screenshot%20from%202020-03-09%2021-29-50.png)
