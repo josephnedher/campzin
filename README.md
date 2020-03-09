@@ -1,7 +1,7 @@
 # A simple Django Proect using functions 
 
 
-  ![web] https://raw.github.com/josephnedher/campzin/blob/master/Screenshot%20from%202020-03-09%2021-29-50.png
+  ![web](Screenshot%20from%202020-03-09%2021-29-50.png)
   
   # How to try this ?
       just clone the project 
